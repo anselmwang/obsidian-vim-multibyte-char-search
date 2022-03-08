@@ -30,7 +30,7 @@ export default class VimMultibyteCharSearchPlugin extends Plugin {
 				await this.initialize();
 		});
 
-		const dict_content = await this.app.vault.adapter.read(".obsidian/plugins/obsidian-vimrc-support/pinyin_search.dict.txt")
+		const dict_content = await this.app.vault.adapter.read(".obsidian/plugins/obsidian-vim-multibyte-char-search/pinyin_search.dict.txt")
 		this.complex_char_2_simple_char_mapping = new ComplexChar2SimpleCharMapping(dict_content);
 
 		this.addCommand({
