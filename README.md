@@ -6,7 +6,7 @@ To simplify the process, this plugin allows users to search multibyte character 
 
 For example, in the Chinese pinyin input method, the encoding of "用来" is "yong lai", we can search such chinese words by "yl".
 
-# Usage
+# Installation
 
 The plugin requires VIM mode being turned on in Obsidian. Then you can install this plugin by searching "obsidian-vim-multibyte-char-search" in Obsidian "Community Plugin" tab.
 
@@ -16,8 +16,9 @@ unmap <Space>
 exmap enrich_vim_search_pattern obcommand obsidian-vim-multibyte-char-search:enrich-current-vim-search-pattern
 nmap <Space>n :enrich_vim_search_pattern
 ```
+# Usage
 
-Then the experience is like below
+The experience is as below
 - Type "/yl" or "?yl"
 - Press `<space> n n`
     - The first part of the key sequence is `<space> n`. According to our above configuration in `.obsidian.vimrc` , this key sequence will trigger command "Enrich Current VIM Search Pattern". The command retrieves current search pattern "yl", and tries to rewrite it according to all chinese phrases in current editor whose input method encoding starts from "yl". In this example, there are 2 chinese phrases "用来" and "原来", so the search pattern is rewritten to regular expression `用来|原来`.
