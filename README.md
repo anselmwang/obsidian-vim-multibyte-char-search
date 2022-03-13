@@ -30,7 +30,8 @@ nmap <Space>/ :search_multibytes
 Then we can trigger "Search Multibytes" command by `<Space>/`.
 
 ## Search single byte pattern first then switch to multibyte pattern
-Another way to use the plugin is the search single byte pattern first and then switch to multibyte pattern. 
+Another way to use the plugin is the search single byte pattern first and then switch to multibyte pattern. Such way may introduce some inconvenience. For example, if you want to search "吃了", the pattern is "cl" and will match with english word "class" first.
+
 - Type "/yl" or "?yl"
 - Press `<space> n n`
     - The first part of the key sequence is `<space> n`. According to our above configuration in `.obsidian.vimrc` , this key sequence will trigger command "Enrich Current VIM Search Pattern". The command retrieves current search pattern "yl", and tries to rewrite it according to all chinese phrases in current editor whose input method encoding starts from "yl". In this example, there are 2 chinese phrases "用来" and "原来", so the search pattern is rewritten to regular expression `用来|原来`.
