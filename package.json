@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-vim-multibyte-char-search",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "Search multibyte characters by the first character of corresponding ASCII encoding of input method. For example, for Chinese, search by the first character of Pinyin.",
 	"main": "main.js",
 	"scripts": {
